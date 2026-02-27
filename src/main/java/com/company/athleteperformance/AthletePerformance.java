@@ -6,6 +6,88 @@ package com.company.athleteperformance;
  */
 public class AthletePerformance {
     
+    private String name; // create name variable. Made private for security
+    private float runTime; // create 100m run time variable. Made private for security
+    private int pushups; // create pushups variable. Made private for security
+    private int situps; // create situps variable. Made private for security
+    private int vJump; // create vertical jump variable. Made private for security
+    private int shuttleRun; // create shuttle run variable. Made private for security
+    private int plankTime; // create plank time variable. Made private for security
+    
+    AthletePerformance() {
+        
+    }
+    
+    AthletePerformance(String name, float runTime, int pushups, int situps, int vJump, int shuttleRun, int plankTime) { // create AthletePerformance constructor
+        this.name = name; // assign name value to name
+        this.runTime = runTime; // assign runTime value to runTime
+        this.pushups = pushups; // assign pushups value to pushups
+        this.situps = situps; // assign situps value to situps
+        this.vJump = vJump; // assign vJump value to vJump
+        this.shuttleRun = shuttleRun; // assign shuttleRun value to shuttleRun
+        this.plankTime = plankTime; // assing plankTime value to plankTime
+    }
+    
+// =============================== Setters Below ===============================
+    void setName() { // setter for name
+        this.name = name;
+    }
+    
+    void setRunTime() { // setter for 100m run time
+        this.runTime = runTime;
+    }
+    
+    void setPushups() { // setter for pushups
+        this.pushups = pushups;
+    }
+    
+    void setSitups() { // setter for situps
+        this.situps = situps;
+    }
+    
+    void setVertJump() { // setter for vertical jump
+        this.vJump = vJump;
+    }
+    
+    void setShuttleRun() { // setter for shuttle run
+        this.shuttleRun = shuttleRun;
+    }
+    
+    void setPlankTime() { // setter for plank time
+        this.plankTime = plankTime;
+    }
+    
+// =============================== Getters Below ===============================
+
+    String getName(String name) { // getter for name
+        return name;
+    }
+    
+    float getRunTime(float runTime) { // getter for 100m run time
+        return runTime;
+    }
+    
+    int getPushups(int pushups) { // getter for pushups
+        return pushups;
+    }
+    
+    int getSitups(int situps) { // getter for situps
+        return situps;
+    }
+    
+    int getVertJump(int vJump) {  // getter for vertical jump
+        return vJump;
+    }
+    
+    int getShuttleRun(int shuttleRun) { // getter for shuttle run
+        return shuttleRun;
+    }
+    
+    int getPlankTime(int plankTime) { // getter for plank time
+        return plankTime;
+    }
+    
+    
 }
 
 //Store athlete information 
