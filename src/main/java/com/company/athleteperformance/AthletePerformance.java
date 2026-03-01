@@ -87,7 +87,13 @@ public class AthletePerformance {
         return plankTime;
     }
     
+    public void calculatePoints() {
+        
+    }
     
+    public void Display() { // method to display information
+        
+    }
 }
 
 //Store athlete information 

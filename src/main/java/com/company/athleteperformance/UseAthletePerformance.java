@@ -1,16 +1,34 @@
 package com.company.athleteperformance;
 
+import java.util.*; // astrisk imports all classes from util and io. Used to reduce number of lines
+import java.io.*;
+
 /**
  *
  * @author francis
  */
 public class UseAthletePerformance {
 
-
     public static void main(String[] args) {
+        
+        String file = "src/main/java/com/company/athleteperformance/athletes.csv";
+        BufferedReader reader = null;
+        String line = "";
+        
+        try {
+            reader = new BufferedReader(new FileReader(file));
 
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.split(",");
+                
+                for (String index : parts) {
+                    System.out.printf("%-10s", index);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }  
     }
-    
 }
 
 //Load athlete data from a CSV file 
