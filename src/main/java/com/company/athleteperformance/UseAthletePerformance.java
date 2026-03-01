@@ -14,15 +14,21 @@ public class UseAthletePerformance {
         String file = "src/main/java/com/company/athleteperformance/athletes.csv";
         BufferedReader reader = null;
         String line = "";
+        int count = 0;
         
-        try {
-            reader = new BufferedReader(new FileReader(file));
+        try { //  try the below block of code
+            reader = new BufferedReader(new FileReader(file)); // read variable file
 
-            while ((line = reader.readLine()) != null) {
-                String[] parts = line.split(",");
+            while ((line = reader.readLine()) != null) { // assign line read by reader to line. While line read is not blank...
+                String[] parts = line.split(","); // assign to  array named parts and remove commas
                 
-                for (String index : parts) {
-                    System.out.printf("%-10s", index);
+                for (String index : parts) { // assign
+                    System.out.printf("%-15s", index);
+                    count++;
+
+                    if (count % 7 == 0) {
+                        System.out.println();
+                    }
                 }
             }
         } catch (Exception e) {
